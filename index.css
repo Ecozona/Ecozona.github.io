@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f9f1;
+    color: #2e5632;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para la pantalla de bienvenida */
+.screen {
+    text-align: center;
+    padding: 20px;
+}
+
+#main-content.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #4d774e;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #2bae66; /* Verde esmeralda */
+}
+
+button {
+    background-color: #2bae66;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #24945a;
+    transform: scale(1.05);
+}
+
+/* Estilos para el contenido principal */
+h2, h3 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.floating-block {
+    background-color: white;
+    border: 2px solid #2bae66;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 3s infinite ease-in-out;
+}
+
+.ecozone-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.eco-zone-block {
+    text-align: center;
+    width: 45%;
+}
+
+.eco-zone-block img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #2bae66;
+}
+
+.eco-zone-block p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #2e5632;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0s; }
+.fade-in:nth-child(2) { animation-delay: 1s; }
+.fade-in:nth-child(3) { animation-delay: 2s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
